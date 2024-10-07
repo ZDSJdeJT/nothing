@@ -1,0 +1,15 @@
+let server = serve({
+    "port": 4000,
+    "fetch": fn(req) {
+        let pathname = req["pathname"];
+        log(pathname);
+        if (pathname == "/version") {
+            return version();
+        }
+        return {
+            "body": "NOT FOUND", 
+            "status": 404,
+        };
+    },
+});
+log("Listening on http://" + server["hostname"] + ":" + toStr(server["port"]));
