@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "author": "Echo",
-  "license": "MIT",
   "module": "src/index.ts",
   "type": "module",
   "scripts": {
